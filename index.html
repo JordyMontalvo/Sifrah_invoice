@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Impulse Boleta</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="control-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-2-4">
+        <div class="slogan">Facturación </div>
+
+        <!-- <label for="config_tax">IVA:
+          <input type="checkbox" id="config_tax" />
+        </label>
+        <label for="config_tax_rate" class="taxrelated">Tasa:
+          <input type="text" id="config_tax_rate" value="13"/>%
+        </label> -->
+        <!-- <label for="config_note">Nota:
+          <input type="checkbox" id="config_note" />
+        </label> -->
+        
+      </div>
+      <div class="col-4 text-right">
+        <a href="javascript:window.print()">Imprimir</a>
+      </div><!--.col-->
+    </div><!--.row-->
+  </div><!--.container-->
+</div><!--.control-bar-->
+
+<header class="row">
+  <div class="logoholder text-center">
+    <!-- <img src="assets/img/logo.png"> -->
+    <img src="assets/img/logo.svg" width="30px">
+  </div><!--.logoholder-->
+
+  <div class="me">
+    <p>
+      <strong>Impulse S.A. </strong><br>
+      Cochabamba, Bolivia.<br>
+    </p>
+  </div><!--.me-->
+
+  <div class="info">
+    <p>
+      Web: <a href="www.salemnutrition.com">www.impulse.com</a><br>
+      E-mail: <a href="mailto:impulse.bo@gmail.com">impulse.bo@gmail.com</a><br>
+      Tel: +591 77960020<br>
+      <!-- Twitter: -->
+    </p>
+  </div><!-- .info -->
+
+  <!-- <div class="bank">
+    <p>
+      Datos bacarios: <br>
+      Titular de la cuenta: <br>
+      IBAN: <br>
+      BIC:
+    </p>
+  </div>< -->!--.bank-->
+
+</header>
+
+
+<div class="row section">
+
+	<div class="col-2">
+    <h1>Boleta</h1>
+  </div><!--.col-->
+
+  <div class="col-2 text-right details">
+    <p>
+      Fecha: <input type="text" class="datePicker" /><br>
+      Boleta: <span id="id"></span><br>
+     <!-- Vence: <input class="twoweeks" type="text"/> -->
+    </p>
+  </div><!--.col-->
+  
+  
+  
+  <div class="col-2">
+    
+
+    <!-- <p class="client">
+      <strong>Facturar a</strong><br>
+      <i id="user_name"><br>
+      <i id="user_dni"><br>
+	    <i id="user_phone"><br>
+    </p> -->
+
+        <p class="client">
+          <strong>Facturar a</strong><br>
+          <span id="user_name"></span><br>
+          <span id="user_dni"></span><br>
+          <span id="user_phone"></span><br>
+        </p>
+  </div><!--.col-->
+  
+  
+  <div class="col-2">
+   
+
+    <!-- <p class="client">
+      <strong>Enviar a</strong><br>
+      [Nombre cliente]<br>
+      [Nombre emmpresa]<br>
+	  [Dirección empresa]<br>
+	  [Tel empresa]
+    </p> -->
+  </div><!--.col-->
+
+  
+
+</div><!--.row-->
+
+<div class="row section" style="margin-top:-1rem">
+<div class="col-1">
+	<table style='width:100%'>
+    <thead>
+	<tr class="invoice_detail">
+      <th width="25%" style="text-align">Vendedor</th>
+       <th width="25%">Orden de compra </th>
+      <th width="20%">Enviar por</th>
+      <th width="30%">Términos y condiciones</th>
+	 </tr> 
+    </thead>
+    <tbody>
+	<tr class="invoice_detail">
+      <td width="25%" style="text-align" id="office_name"></td>
+       <td width="25%"> </td>
+      <td width="20%"> </td>
+      <td width="30%">Pago al contado</td>
+	 </tr>
+	</tbody>
+	</table>
+</div>
+
+</div><!--.row-->
+
+<div class="invoicelist-body">
+  <table>
+    <thead>
+      <th width="5%">Código</th>
+      <th width="60%">Descripción</th>
+      
+      <th width="10%">Cant.</th>
+      <th width="15%">Precio</th>
+      <th class="taxrelated">IGV</th>
+      <th width="10%">Total</th>
+    </thead>
+    <tbody>
+      <!-- <tr>
+        <td width='5%'><a class="control removeRow" href="#">x</a> <span>12345</span></td>
+        <td width='60%'><span>Descripción</span></td>
+        <td class="amount"><input type="text" value="1"/></td>
+        <td class="rate"><input type="text" value="99" /></td>
+        <td class="amount">1</td>
+        <td class="rate">99</td>
+        <td class="tax taxrelated"></td>
+        <td class="sum"></td>
+      </tr> -->
+    </tbody>
+  </table>
+  <!-- <a class="control newRow" href="#">+ Nueva fila</a> -->
+</div><!--.invoice-body-->
+
+<div class="invoicelist-footer">
+  <table>
+    <tr class="taxrelated">
+      <td>IVA:</td>
+      <td id="total_tax"></td>
+    </tr>
+    <tr>
+      <td><strong>Total:</strong></td>
+      <td id="total_price"></td>
+    </tr>
+  </table>
+</div>
+
+<div class="note">
+  <h2>Nota:</h2>
+</div><!--.note-->
+
+<footer class="row">
+  <div class="col-1 text-center">
+    <p class="notaxrelated">El monto de la factura no incluye el impuesto sobre las ventas.</p>
+    
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="assets/js/main.js"></script>
+
+<script type="text/javascript">
+
+  const urlSearchParams = new URLSearchParams(window.location.search)
+  const params = Object.fromEntries(urlSearchParams.entries())
+  // console.log({ params })
+
+
+  const { id } = params
+  // const id = 'dtd1u74kzic'
+  // const id = 's15hc698ic'
+
+  // console.log({ id })
+
+  const url = 'https://impulse.herokuapp.com/api/aux/invoice'
+  // const url = 'http://localhost:3000/api/aux/invoice'
+
+  const data = { id }
+  console.log(data)
+
+  fetch(url, { method: 'POST', body: JSON.stringify(data) }).then(function(response) {
+    return response.json()
+  }).then(function(data) {
+
+    const { products, user, office } = data
+    console.log(products, user)
+
+    let total_price = 0
+
+    products.forEach(product => {
+
+      var newRow = `
+      <tr>
+        <td><span>${ product.id }</span></td>
+        <td><span>${ product.name }</span></td>
+        <td class="amount">${ product.total }</td>
+        <td class="rate">${ product.price }</td>
+        <td class="tax taxrelated">${ 13 / 100 * product.price }</td>
+        <td class="sum">${ product.price * product.total }</td>
+      </tr>`
+
+      $('.invoicelist-body tbody').append(newRow);
+
+
+      total_price += product.price * product.total
+
+    })
+
+    $('#total_price').text(total_price.toFixed(2));
+    $('#total_tax').text(13 / 100 * total_price.toFixed(2));
+
+
+    $('#user_name').text(`${user.name} ${user.lastName}`);
+    $('#user_dni').text(user.dni);
+    $('#user_phone').text(user.phone);
+
+    $('#id').text(id);
+
+    $('#office_name').text(office.name);
+
+  }).catch(function(err) {
+    console.log('Fetch Error :-S', err)
+  })
+
+
+</script>
+</body>
+</html>
