@@ -447,7 +447,8 @@ h1 {
     margin: 0;
     padding: 0;
     font-size: 2rem;
-    color: #009688
+/*    color: #009688*/
+    color: #351251
 }
 
 .details input {
@@ -565,7 +566,8 @@ h1 {
 
 .invoicelist-footer table #total_price {
     font-size: 2rem;
-    color: #009688
+/*    color: #009688*/
+    color: #351251
 }
 
 .note {
