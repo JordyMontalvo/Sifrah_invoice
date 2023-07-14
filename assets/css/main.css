@@ -270,7 +270,8 @@ input:focus {
 }
 
 a {
-    color: #009688;
+/*    color: #009688;*/
+    color: #351251;
     text-decoration: none
 }
 
