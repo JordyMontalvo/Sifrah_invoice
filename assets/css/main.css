@@ -332,7 +332,8 @@ p {
     left: 0;
     right: 0;
     z-index: 100;
-    background: #009688;
+/*    background: #009688;*/
+    background: #351251;
     color: white;
     line-height: 4rem;
     height: 4rem
