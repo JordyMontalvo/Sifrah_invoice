@@ -230,7 +230,7 @@
         <td><span>${ product.name }</span></td>
         <td class="amount">${ product.total }</td>
         <td class="rate">${ product.price }</td>
-        <td class="tax taxrelated">${ Number(13 / 100 * product.price).toFixed(2) }</td>
+        <td class="tax taxrelated">${ Number(12 / 100 * product.price).toFixed(2) }</td>
         <td class="sum">${ product.price * product.total }</td>
       </tr>`
 
@@ -242,7 +242,7 @@
     })
 
     $('#total_price').text(total_price.toFixed(2));
-    $('#total_tax').text(13 / 100 * total_price.toFixed(2));
+    $('#total_tax').text(12 / 100 * total_price.toFixed(2));
 
 
     $('#user_name').text(`${user.name} ${user.lastName}`);
