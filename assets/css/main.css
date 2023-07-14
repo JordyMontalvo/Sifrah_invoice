@@ -391,7 +391,8 @@ p {
 header {
     margin: 1rem 0 0;
     padding: 0 0 2rem 0;
-    border-bottom: 3pt solid #009688
+/*    border-bottom: 3pt solid #009688*/
+    border-bottom: 3pt solid #351251
 }
 
 header p {
@@ -464,7 +465,8 @@ h1 {
 
 
 .invoice_detail{
-	border: solid 1px #009688;
+/*    border: solid 1px #009688;*/
+	border: solid 1px #351251;
 	padding:10px;
 	height:25px;
 	text-align:center
